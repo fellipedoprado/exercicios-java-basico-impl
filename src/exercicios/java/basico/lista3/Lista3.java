@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 
 public class Lista3 {
-    public static void menu() {
-        Scanner scanner = new Scanner(System.in);
+    public static void menu(Scanner scanner) {
         boolean continuar = true;
 
         while (continuar) {
