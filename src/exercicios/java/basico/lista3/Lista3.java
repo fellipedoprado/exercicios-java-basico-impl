@@ -1,5 +1,8 @@
 package exercicios.java.basico.lista3;
 
+import exercicios.java.basico.lista3.carro.CarroApp;
+import exercicios.java.basico.lista3.contabancaria.ContaBancariaApp;
+import exercicios.java.basico.lista3.petshop.PetShopApp;
 import java.util.Scanner;
 
 
@@ -9,34 +12,29 @@ public class Lista3 {
 
         while (continuar) {
             System.out.println("\n--- Lista 3 ---");
-            System.out.println("1 - Atividade1");
-            System.out.println("2 - Atividade2");
-            System.out.println("3 - Atividade3");
+            System.out.println("1 - Conta Bancaria");
+            System.out.println("2 - Carro");
+            System.out.println("3 - PetShop");
             System.out.println("0 - Voltar");
             System.out.print("Escolha uma opção: ");
             int opcao = scanner.nextInt();
 
             switch (opcao) {
-                case 1: {
-                    // TODO: Exercicio 1
+                case 1 -> {
+                    ContaBancariaApp.executar(scanner);
                 }
-                break;
-                case 2: {
-                    // TODO: Exercicio 2
+                case 2 -> {
+                    CarroApp.executar(scanner);
                 }
-                break;
-                case 3: {
-                    // TODO: Exercicio 3
+                case 3 -> {
+                    PetShopApp.executar(scanner);
                 }
-                break;
-                case 0: {
+                case 0 -> {
                     continuar = false;
                 }
-                break;
-                default: {
+                default -> {
                     System.out.println("Opção inválida.");
                 }
-                break;
             }
         }
     }
